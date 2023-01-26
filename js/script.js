@@ -16,18 +16,18 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 
-// variables
+// variabler
 var msgTxt = document.getElementById('msgTxt');
 var sender;
 if (sessionStorage.getItem('sender')) {
    sender = sessionStorage.getItem('sender');
 } else {
-   sender = prompt('PLEASE ENTER YOUR NAME');
+   sender = prompt('Please enter your name');
    sessionStorage.setItem('sender', sender);
 };
 
 
-// TO SEND MESSAGES
+// funktion ? eventlistener för att kunna skicka meddelanden
 const sendMsg = function sendMsg() {
    var msg = msgTxt.value;
    var timestamp = new Date().getTime();
@@ -41,7 +41,7 @@ const sendMsg = function sendMsg() {
 
 document.getElementById("msgBtn").addEventListener("click", sendMsg);
 
-// TO RECEIVE MSG
+// Funktion för att ta enot meddelanden
 onChildAdded(ref(db, "messages"), (data) => {
    if (data.val().sender == sender) {
       messages.innerHTML += "<div style=justify-content:end class=outer id=" + data.key + "><div id=inner class=me>you : " + data.val().msg + "</div></div>";
