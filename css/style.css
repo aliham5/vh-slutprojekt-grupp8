@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+
+/* En feature - animering av bakgrunden */
+
 /* Camillas feature - en animering av bakgrunden */
 body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -6,6 +10,7 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
+  overflow: hidden; /* Hide 1 scrollbar */
 }
 
 @keyframes gradient {
@@ -17,6 +22,15 @@ body {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
   }
 }
 
@@ -60,8 +74,51 @@ body {
 }
 
 h1 {
+  width: 35vw;
+  padding: 0.2em;
   text-align: center;
+  margin: 20px auto;
   color: whitesmoke;
+  --borderWidth: 7px;
+  background: #1d1f20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+
+h1:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #messages {
@@ -93,6 +150,8 @@ h1 {
   opacity: 0.8;
   color: black;
   font-weight: bold;
+  animation: popup;
+  animation-duration: 0.8s;
 }
 
 .notMe {

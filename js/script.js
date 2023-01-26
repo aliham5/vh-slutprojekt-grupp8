@@ -20,8 +20,8 @@ const db = getDatabase(app);
 
 
 // variabler
-var msgTxt = document.getElementById('msgTxt');
-var sender;
+const msgTxt = document.getElementById('msgTxt');
+let sender;
 if (sessionStorage.getItem('sender')) {
    sender = sessionStorage.getItem('sender');
 } else {
@@ -59,11 +59,13 @@ onChildAdded(ref(db, "messages"), (data) => {
    } else {
        messages.innerHTML += "<div class=outer id=" + data.key + "><div id=inner class=notMe>" + data.val().sender + " : " + data.val().msg + "</div></div>";
    }
-})
 
 
 
 
 
 
+
+
+});
 
