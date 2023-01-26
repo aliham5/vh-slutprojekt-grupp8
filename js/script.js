@@ -55,8 +55,6 @@ onChildAdded(ref(db, "messages"), (data) => {
 })
 
 
-<<<<<<< Updated upstream
-=======
 // TO DELETE MSG
 const dltMsg = function dltMsg(key) {
    remove(ref(db, "messages/" + key));
@@ -100,7 +98,6 @@ onChildRemoved(ref(db, "messages"), (data) => {
 
 
 
->>>>>>> Stashed changes
 
 
 
