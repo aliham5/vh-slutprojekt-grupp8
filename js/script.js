@@ -24,7 +24,7 @@ if (sessionStorage.getItem('sender')) {
 } else {
    sender = prompt('PLEASE ENTER YOUR NAME');
    sessionStorage.setItem('sender', sender);
-}
+};
 
 
 // TO SEND MESSAGES
@@ -38,7 +38,7 @@ const sendMsg = function sendMsg() {
 
 
    msgTxt.value = "";
-}
+};
 
 
 document.getElementById("msgBtn").addEventListener("click", sendMsg);
