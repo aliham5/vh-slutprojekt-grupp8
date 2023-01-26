@@ -1,4 +1,4 @@
-/* En feature - anmering av bakgrunden */
+/* En feature - animering av bakgrunden */
 body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -32,8 +32,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  /* width: calc(100% - 100px); */
-  width: 90%;
+  width: calc(100% - 120px);
   margin-left: 0.5rem;
   height: 100%;
   padding-left: 10px;
