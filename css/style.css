@@ -20,6 +20,15 @@ body {
   }
 }
 
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
 #sendMsg {
   position: fixed;
   left: 0;
@@ -92,6 +101,8 @@ h1 {
   opacity: 0.8;
   color: black;
   font-weight: bold;
+  animation: popup;
+  animation-duration: 0.8s;
 }
 
 .notMe {
