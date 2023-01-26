@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:200");
 
-/* En feature - animering av bakgrunden */
-
 /* Camillas feature - en animering av bakgrunden */
 body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
