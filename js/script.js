@@ -58,49 +58,6 @@ onChildAdded(ref(db, "messages"), (data) => {
 })
 
 
-// TO DELETE MSG
-const dltMsg = function dltMsg(key) {
-remove(ref(db, "messages/" + key));
-
-
-   
-   
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// WHEN MSG IS DELETED
-onChildRemoved(ref(db, "messages"), (data) => {
-   var msgBox = document.getElementById(data.key);
-   messages.removeChild(msgBox);
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
