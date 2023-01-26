@@ -34,16 +34,12 @@ const sendMsg = function sendMsg() {
    set(ref(db, "messages/" + timestamp), {
       msg: msg,
       sender: sender
-   })
-
+   });
 
    msgTxt.value = "";
 };
 
-
 document.getElementById("msgBtn").addEventListener("click", sendMsg);
-
-
 
 // TO RECEIVE MSG
 onChildAdded(ref(db, "messages"), (data) => {
