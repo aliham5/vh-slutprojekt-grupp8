@@ -31,12 +31,15 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: calc(100% - 100px);
+  /* width: calc(100% - 100px); */
+  width: 90%;
+  margin-left: 0.5rem;
   height: 100%;
   padding-left: 10px;
   box-sizing: border-box;
   border-radius: 10px;
   opacity: 0.8;
+  font-weight: 600;
 }
 
 #msgBtn {
@@ -46,6 +49,13 @@ body {
   width: 100px;
   height: 100%;
   border-radius: 10px;
+  opacity: 0.85;
+  margin-right: 0.5rem;
+  font-weight: 600;
+}
+
+#msgBtn:hover {
+  background-color: inherit;
   opacity: 0.8;
 }
 
