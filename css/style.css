@@ -77,6 +77,7 @@ h1 {
   text-align: center;
   margin: 20px auto;
   color: whitesmoke;
+  /* Louise contribution */
   --borderWidth: 7px;
   background: #1d1f20;
   position: relative;
@@ -148,6 +149,7 @@ h1:after {
   opacity: 0.8;
   color: black;
   font-weight: bold;
+  /* Antons contribution */
   animation: popup;
   animation-duration: 0.8s;
 }
@@ -159,6 +161,7 @@ h1:after {
   font-weight: bold;
 }
 
+/* Ellis contribution */
 .lds-hourglass {
   display: inline-block;
   position: relative;
